@@ -1,0 +1,11 @@
+[package]
+name = "LeetCode-Rust"
+version = "0.1.0"
+authors = ["刘玉刚 <huayue430@126.com>"]
+edition = "2018"
+
+[dependencies]
+
+[[bin]]
+name = "LeetCode-Rust"
+path = "main.rs"
