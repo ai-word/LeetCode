@@ -1,20 +1,24 @@
+/**
+ * @param {string} s
+ * @return {number}
+ */
 var lengthOfLongestSubstring = function (s) {
-  var sum = ""; // 存放的结果字符串
+  var sum = "";
   var max = 0;
-  var i, k = 0;
+  var i = 0;
+  var k = i;
   while (i < s.length && k < s.length) {
-    // 如果检测到sum中没有字符s[k]则sum+s[k],k++
     if (sum.indexOf(s[k]) === -1) {
       sum += s[k];
       k++;
-    } else {  // 如果检测到sum中有字符s[k]则sum="",i++,k=i
+    } else {
       i++;
       k = i;
       sum = "";
     }
-    max = Math.max(max, sum.length); // amx始终存储最大的
+    max = Math.max(max, sum.length);
   }
   return max;
 };
-let res = lengthOfLongestSubstring("abcbdbdbdbd")
+let res = lengthOfLongestSubstring("abcag")
 console.log(res)
