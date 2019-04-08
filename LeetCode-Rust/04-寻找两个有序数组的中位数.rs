@@ -1,5 +1,5 @@
 fn main() {
-  println!("{}",Solution::find_median_sorted_arrays(vec![1,3],vec![2]))
+    println!("{}",Solution::find_median_sorted_arrays(vec![1,3],vec![2]))
 }
 struct Solution;
 impl Solution {
@@ -74,7 +74,7 @@ impl Solution {
         }
         let l = ans.len();
         if flag == 2 {
-           return  ((ans[l-1] + ans[l-2]) as f64)/2.0;
+            return  ((ans[l-1] + ans[l-2]) as f64)/2.0;
         } else {
             return ans[l-1] as f64;
         }
